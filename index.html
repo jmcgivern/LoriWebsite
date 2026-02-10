@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lori Ursu, RCRT - Physical Therapy & Wellness</title>
+    <title>Ursu Holistic Wellness</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,7 +18,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">Lori Ursu, RCRT</a>
+        <a class="navbar-brand" href="#home">Ursu Holistic Wellness</a>
 
         <button
           class="navbar-toggler"
@@ -32,21 +32,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#reflexology">About Reflexology</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          <a href="#" class="btn-schedule" onclick="openJaneApp()"
-            >Schedule Appointment</a
-          >
+          <div class="d-flex align-items-center">
+            <div class="nav-address d-none d-md-block me-2" aria-hidden="true">3335 Dougall Ave,<br/>Windsor, ON N9E 1S8</div>
+            <a href="#" class="btn-schedule" onclick="openJaneApp()">Schedule Appointment</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -57,18 +58,20 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content fade-in">
-              <h1>Holistic Nursing, Reflexology & Wellness Care</h1>
+              <h1>Reflexology & Wellness Care</h1>
               <p>
-                 Expert care combining advanced nursing, therapeutic reflexology, and personalized wellness to support your healing journey and vibrant health.
+                Expert care combining therapeutic reflexology and personalized wellness to support your healing journey.
               </p>
-              <a href="#" class="btn-schedule me-3" onclick="openJaneApp()"
-                >Book Your Session</a
-              >
-              <a href="#about" class="btn btn-outline-light btn-lg"
-                >Learn More</a
-              >
+              <a href="#" class="btn-schedule me-3" onclick="openJaneApp()">Book Your Session</a>
             </div>
           </div>
+
+            <!-- hero now contains core messaging and (on md+) a supporting image to the right -->
+            <div class="col-lg-6 d-none d-md-flex justify-content-center">
+              <div class="hero-image-wrapper">
+                <img src="images/LoriWorkingOnFeet.png" alt="Lori working on feet" class="hero-image" />
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -76,15 +79,17 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
       <div class="container">
-        <h2 class="section-title fade-in">About Lori</h2>
+        <h2 class="section-title fade-in">About Lori Ursu</h2>
         <div class="row align-items-center">
           <div class="col-lg-6 fade-in">
             <div class="photo-wrapper">
-              <img
-                src="images/lori cover photo.jpeg"
-                alt="Lori Ursu - Health & Wellness"
-                class="about-photo"
-              />
+              <a href="images/lori cover photo.jpeg" target="_blank" rel="noopener">
+                <img
+                  src="images/lori cover photo.jpeg"
+                  alt="Lori Ursu - Health & Wellness"
+                  class="about-photo clickable-image"
+                />
+              </a>
             </div>
           </div>
           <div class="col-lg-6 fade-in">
@@ -101,22 +106,33 @@
               whole person through evidence-based medical care combined with
               natural wellness approaches to promote healing and optimal health.
             </p>
+            <!-- Inspiration: grandfather image -->
+            <div class="inspiration mb-4">
+              <h5>Inspiration</h5>
+              <div class="row">
+                <div class="col-4">
+                  <!-- Image: Lori and her grandfather (click to open full image) -->
+                  <a href="images/LoriAndGrandfather.png" target="_blank" rel="noopener">
+                    <img src="images/LoriAndGrandfather.png" alt="Lori's grandfather" class="about-thumb clickable-image" />
+                  </a>
+                </div>
+                <div class="col-8">
+                  <p>
+                    Lori's interest in reflexology was inspired by time spent with her grandfather, who holistic care and treating other's with reflexology.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <div class="col-6">
-                <h5>
-                  <i class="fas fa-graduation-cap text-primary me-2"></i
-                  >Education
-                </h5>
+                  <h5>Education</h5>
                 <p>
                   Nursing Diploma (<b>St. Clair College</b>)<br />Perioperative
                   Nursing (<b>Mohawk College</b>)
                 </p>
               </div>
               <div class="col-6">
-                <h5>
-                  <i class="fas fa-certificate text-primary me-2"></i
-                  >Certifications
-                </h5>
+                  <h5>Certifications</h5>
                 <p>
                   Registered Canadian Reflexology Therapist<br />Perioperative
                   Nursing<br />Registered Practitioner Nurse
@@ -128,85 +144,41 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (Reflexology) -->
     <section id="services" class="section">
       <div class="container">
-        <h2 class="section-title fade-in">Treatment Services</h2>
+        <h2 class="section-title fade-in">Reflexology Services</h2>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="service-card fade-in">
               <div class="service-icon">
-                <i class="fas fa-dumbbell"></i>
+                <img src="images/HandReflexology_Bubble.png" alt="Hand reflexology" class="service-bubble" />
               </div>
-              <h4>Orthopedic Rehabilitation</h4>
+              <h4>Hand Reflexology</h4>
               <p>
-                Comprehensive treatment for post-surgical recovery, joint
-                injuries, and musculoskeletal conditions to restore function and
-                reduce pain.
+                Pressure is applied to various reflex points in the hands to alleviate symptoms in other areas of the body.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="service-card fade-in">
               <div class="service-icon">
-                <i class="fas fa-running"></i>
+                <img src="images/FootReflexology_Bubble.png" alt="Foot reflexology" class="service-bubble" />
               </div>
-              <h4>Sports Injury Recovery</h4>
+              <h4>Foot Reflexology</h4>
               <p>
-                Specialized care for athletes at all levels, focusing on injury
-                prevention, performance optimization, and safe return to sport.
+                Using specific hand and finger techniques, the foot is stimulated to relieve health conditions in other parts of the body.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="service-card fade-in">
               <div class="service-icon">
-                <i class="fas fa-heart"></i>
+                <img src="images/Face_Reflexology_Bubble.png" alt="Face reflexology" class="service-bubble" />
               </div>
-              <h4>Chronic Pain Management</h4>
+              <h4>Face Reflexology</h4>
               <p>
-                Evidence-based approaches to manage persistent pain conditions
-                and improve quality of life through movement and education.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in">
-              <div class="service-icon">
-                <img
-                  src="images/reflexology.jpeg"
-                  alt="Lori Performing Reflexology"
-                  class ="service-photo-icon"
-                />
-              </div>
-              <h4>Manual Therapy</h4>
-              <p>
-                Hands-on techniques including joint mobilization, soft tissue
-                work, and myofascial release to improve mobility and function.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in">
-              <div class="service-icon">
-                <i class="fas fa-spa"></i>
-              </div>
-              <h4>Dry Needling</h4>
-              <p>
-                Targeted trigger point therapy using thin needles to release
-                muscle tension, reduce pain, and improve movement patterns.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in">
-              <div class="service-icon">
-                <i class="fas fa-user-check"></i>
-              </div>
-              <h4>Movement Analysis</h4>
-              <p>
-                Comprehensive assessment of movement patterns to identify
-                dysfunction and develop personalized treatment plans.
+                By applying pressure to specific points of the face, corresponding organs and systems in the body are targeted. Lori begins facial sessions with manual lymph drainage, then reflexology on the decolletage, neck, and face, followed by gua sha and facial cupping.
               </p>
             </div>
           </div>
@@ -214,43 +186,44 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section about-section">
+    <!-- About Reflexology -->
+    <section id="reflexology" class="section about-section">
       <div class="container">
-        <h2 class="section-title fade-in">What Patients Say</h2>
+        <h2 class="section-title fade-in">About Reflexology</h2>
         <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="testimonial fade-in">
-              <p class="testimonial-text">
-                "Dr. Johnson helped me get back to running after my knee injury.
-                Her expertise and caring approach made all the difference in my
-                recovery."
-              </p>
-              <p class="testimonial-author">- Michael R.</p>
+          <div class="col-lg-8 mx-auto fade-in">
+            <p>
+              Hand, foot, and face reflexology are holistic therapies based on the idea that specific points on the hands, feet, and face correspond to organs and systems throughout the body. Reflexology therapists are specialists who undergo specific training and certification, different from that of massage therapists.
+            </p>
+            <!-- Benefits image replaces the bullet list -->
+            <div class="my-4">
+              <div class="row g-3 align-items-center">
+                <div class="col-md-6 text-center">
+                  <a href="images/Benefits_Of_Reflexology.png" target="_blank" rel="noopener">
+                    <img src="images/Benefits_Of_Reflexology.png" alt="Benefits of Reflexology" class="reflex-col-image clickable-image img-fluid" />
+                  </a>
+                </div>
+                <div class="col-md-6 text-center">
+                  <a href="images/Massage Vs Reflexology AI Generated.png" target="_blank" rel="noopener">
+                    <img src="images/Massage Vs Reflexology AI Generated.png" alt="Reflexology vs Massage" class="reflex-col-image clickable-image img-fluid" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="testimonial fade-in">
-              <p class="testimonial-text">
-                "Professional, knowledgeable, and truly cares about her
-                patients. I'm pain-free for the first time in years thanks to
-                her treatment."
-              </p>
-              <p class="testimonial-author">- Jennifer L.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="testimonial fade-in">
-              <p class="testimonial-text">
-                "The personalized treatment plan and education I received has
-                helped me prevent future injuries. Highly recommend!"
-              </p>
-              <p class="testimonial-author">- David M.</p>
+            <p>For additional information see <a href="https://www.reflexologycanada.org/en/" target="_blank" rel="noopener">Information about reflexology</a>.</p>
+
+            <!-- Ancient practice image replaces the historical bullets -->
+            <div class="my-4 text-center">
+              <a href="images/Ancient_Reflexology.png" target="_blank" rel="noopener">
+                <img src="images/Ancient_Reflexology.png" alt="Ancient practice of reflexology" class="reflex-image clickable-image" />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Testimonials removed per request -->
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
@@ -265,14 +238,18 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                       <h5>Location</h5>
-                      <p>123 Wellness Drive<br />Essex,On ABC123</p>
+                      <p>3335 Dougall Ave, Windsor, ON N9E 1S8, Canada</p>
                     </div>
                   </div>
-                  <div class="contact-item">
-                    <i class="fas fa-phone"></i>
+                  <div class="contact-item social-media">
+                    <i class="fas fa-share-alt"></i>
                     <div>
-                      <h5>Phone</h5>
-                      <p>(555) 123-4567</p>
+                      <h5>Social</h5>
+                      <p>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-lg me-2"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg me-2"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -281,7 +258,7 @@
                     <i class="fas fa-envelope"></i>
                     <div>
                       <h5>Email</h5>
-                      <p>info@LoriUrus@gmail.com</p>
+                      <p>UrsuHolisticWellness@gmail.com</p>
                     </div>
                   </div>
                   <div class="contact-item">
@@ -292,6 +269,9 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="map-wrapper mt-4">
+                <iframe src="https://www.google.com/maps?q=3335+Dougall+Ave,+Windsor,+ON+N9E+1S8&output=embed" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
               </div>
               <div class="text-center mt-4">
                 <a href="#" class="btn-schedule" onclick="openJaneApp()"
@@ -307,7 +287,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Lori Ursu Reflexology. All rights reserved.</p>
+        <p>&copy; 2026 Ursu Holistic Wellness. All rights reserved.</p>
       </div>
     </footer>
 
@@ -319,16 +299,20 @@
         window.open("https://your-jane-app-booking-link.com", "_blank");
       }
 
-      // Smooth scrolling for navigation links
+      // Smooth scrolling for navigation links with offset for fixed navbar
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        const href = anchor.getAttribute('href');
+        // ignore plain '#' anchors (social placeholders)
+        if (!href || href === "#") return;
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
+          const target = document.querySelector(href);
+          // compute navbar height to offset the scroll so the heading is visible
+          const navbar = document.querySelector('.navbar');
+          const navbarHeight = navbar ? navbar.offsetHeight : parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset')) || 80;
           if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+            const targetY = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 12; // small extra gap
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
           }
         });
       });
@@ -352,9 +336,23 @@
         observer.observe(el);
       });
 
-      // Initial fade-in for hero content
-      window.addEventListener("load", function () {
-        document.querySelector(".hero-content").classList.add("visible");
+      // Initial setup: compute navbar height (used for CSS var and scroll offset), and fade-in hero
+      function updateNavOffset() {
+        const navbar = document.querySelector('.navbar');
+        const navHeight = navbar ? navbar.offsetHeight : 80;
+        document.documentElement.style.setProperty('--nav-offset', navHeight + 'px');
+      }
+
+      window.addEventListener('load', function () {
+        updateNavOffset();
+        // ensure hero content fades in
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) heroContent.classList.add('visible');
+      });
+
+      // Update offset on resize in case navbar height changes (mobile toggle, font size, etc.)
+      window.addEventListener('resize', function () {
+        updateNavOffset();
       });
 
       // Mobile menu close on link click
