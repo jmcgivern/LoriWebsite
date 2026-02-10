@@ -400,6 +400,24 @@ body {
         height: auto;
         width: 100%;
     }
+
+    /* Increase spacing on small screens to avoid the benefits image
+       overlapping the preceding paragraph. Keep changes scoped to
+       #reflexology so other sections are not affected. */
+    #reflexology .my-4 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    #reflexology p {
+        margin-bottom: 0.9rem;
+    }
+    #reflexology .reflex-figure {
+        margin-bottom: 0.75rem;
+    }
+    #reflexology .reflex-image {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
 }
 
 .service-card h4 {
