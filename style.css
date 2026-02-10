@@ -59,6 +59,46 @@ body {
     padding-top: calc(var(--nav-offset) + 8px);
 }
 
+/* Skip link (hidden until focused) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    color: var(--dark-text);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 2000;
+}
+
+/* Focus styles for keyboard users */
+.btn-schedule:focus,
+.btn-schedule:focus-visible {
+    outline: 3px solid #000; /* black outline to match Schedule button */
+    outline-offset: 3px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.nav-link:focus,
+.service-card:focus {
+    outline: 3px solid rgba(32,178,170,0.35);
+    outline-offset: 3px;
+}
+
+/* Ensure hover effects are visible on focus too */
+.btn-schedule:focus { transform: translateY(-2px); }
+.service-card:focus { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(46, 139, 87, 0.12); }
+
 /* Navigation */
 .navbar {
   background: rgba(255, 255, 255, 0.85);
@@ -204,8 +244,9 @@ body {
 }
 
 .about-section {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(249,244,239,0.92); /* warm cream */
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(46,139,87,0.03);
 }
 
 .section-title {
@@ -231,14 +272,14 @@ body {
 
 /* Service Cards */
 .service-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(249,244,239,0.92));
+    padding: 1.6rem 1.25rem;
+    border-radius: 14px;
     text-align: center;
     transition: all 0.25s ease;
-    border: 1px solid rgba(46, 139, 87, 0.08);
+    border: 1px solid rgba(46, 139, 87, 0.06);
     height: 100%;
-    box-shadow: 0 8px 25px rgba(46, 139, 87, 0.06);
+    box-shadow: 0 6px 18px rgba(44,62,80,0.06);
 }
 
 .service-card:hover {
@@ -273,7 +314,7 @@ body {
     width: 60%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 14px rgba(44,62,80,0.08);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -287,6 +328,25 @@ body {
 .clickable-image:hover {
     transform: scale(1.02);
 }
+
+/* Figure and caption for reflex images */
+.reflex-figure { margin: 0; display:flex; align-items:center; justify-content:center; }
+
+.reflex-more {
+    font-size: 1rem;
+}
+.reflex-more .muted-label {
+    display: block;
+    color: var(--light-text);
+    font-style: italic;
+    margin-bottom: 0.25rem;
+}
+.reflex-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.reflex-link:focus, .reflex-link:hover { color: var(--accent-color); }
 
 /* Smaller thumbnail used in About inspiration */
 .about-thumb {
@@ -303,19 +363,57 @@ body {
     max-width: 100%;
     width: auto;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    /* use a subtle border instead of a heavy card shadow */
+    border: 1px solid rgba(44,62,80,0.04);
     margin-left: auto;
     margin-right: auto;
+    background: rgba(255,255,255,0.98);
+    padding: 6px;
 }
 
 /* Equalize and enlarge the side-by-side images on md+ */
 @media (min-width: 768px) {
+    /* Use a more moderate unified height so both columns visually align
+       without creating large vertical gaps. */
+    .reflex-figure { height: 462px; }
+    /* keep explicit per-figure selectors in case HTML references them elsewhere */
+    .reflex-figure.benefits-figure,
+    .reflex-figure.comparison-figure { height: 462px; }
+
     .reflex-col-image {
-        height: 520px; /* increased to make images larger */
+        max-height: 100%; /* fit inside the figure */
         width: auto; /* keep aspect ratio */
         object-fit: contain; /* show whole image */
     }
+}
+
+/* Tighten vertical spacing specifically for the About Reflexology area
+   so it matches spacing used elsewhere on the site. These rules are
+   scoped to #reflexology to avoid affecting other sections. */
+/* Tighten vertical spacing for the About Reflexology area */
+#reflexology.section {
+    padding-top: 0.75rem; /* smaller top gap */
+    padding-bottom: 0.75rem; /* smaller bottom gap */
+}
+#reflexology .section-title {
+    margin-bottom: 0.5rem; /* bring title closer to the intro */
+}
+#reflexology p {
+    margin-bottom: 0.35rem; /* tighten paragraphs inside reflexology */
+}
+#reflexology .reflex-figure {
+    margin: 0 0 0.25rem; /* reduce whitespace between the two column figures */
+}
+#reflexology .reflex-image {
+    margin-top: 0.35rem; /* reduce space between the column images and the ancient image */
+    margin-bottom: 0.35rem;
+}
+
+/* Reduce spacing for bootstrap utility class used around the figure group */
+#reflexology .my-4 {
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.35rem !important;
 }
 
 @media (max-width: 767px) {
@@ -339,21 +437,35 @@ body {
 
 /* Contact Section */
 .contact-section {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(249,244,239,0.94);
     backdrop-filter: blur(6px);
     /* Reduce the top padding to tighten the space above Get In Touch */
     padding-top: 1.25rem;
+    border: 1px solid rgba(46,139,87,0.03);
 }
 
 /* Small address text next to schedule button in the navbar */
 .nav-address {
-    color: var(--dark-text);
-    font-size: 0.86rem;
+    color: var(--primary-color);
+    font-size: 0.92rem;
     line-height: 1.05;
     white-space: normal; /* allow wrapping */
     overflow-wrap: anywhere;
     text-align: right;
-    max-width: 200px;
+    max-width: 220px;
+    padding: 0.35rem 0.6rem;
+    background: linear-gradient(135deg, rgba(224,242,241,0.95), rgba(250,246,241,0.9));
+    border-radius: 12px;
+    border: 1px solid rgba(46,139,87,0.08);
+    box-shadow: 0 6px 18px rgba(32,178,170,0.06);
+    font-weight: 600;
+}
+
+/* make nav-address button-like but accessible */
+.nav-address {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 @media (max-width: 767px) {
@@ -361,11 +473,29 @@ body {
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2.25rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.08);
-    border: 1px solid rgba(46, 139, 87, 0.06);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,244,239,0.96));
+    padding: 1.75rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(44,62,80,0.06);
+    border: 1px solid rgba(46, 139, 87, 0.05);
+}
+
+/* inline address button inside contact area */
+.address-link {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.address-link:focus {
+    outline: 3px solid rgba(32,178,170,0.25);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .contact-item {
@@ -397,9 +527,9 @@ body {
 .social-media a { color: var(--primary-color); text-decoration:none; }
 .social-media a:hover { color: var(--accent-color); }
 
-/* Footer — simplified light background */
+/* Footer — simplified warm background */
 .footer {
-    background: #f3f3f3;
+    background: #F7F3EE; /* warm, light beige */
     color: var(--dark-text);
     text-align: center;
     padding: 1.25rem 0;
