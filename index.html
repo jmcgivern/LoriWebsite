@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- Navigation -->
   <header role="banner">
   <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Primary navigation">
@@ -413,6 +412,27 @@
           }
         });
       });
+
+      // Close mobile menu when tapping/clicking the main content area (useful on phones)
+      (function() {
+        const main = document.getElementById('main-content');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (!main || !navbarCollapse) return;
+
+        function hideIfOpen(e) {
+          // If the navbar isn't open, nothing to do
+          if (!navbarCollapse.classList.contains('show')) return;
+          // Ignore clicks inside the navbar or on the toggler
+          if (e.target.closest('.navbar') || e.target.closest('.navbar-toggler') || e.target.closest('.navbar-collapse')) return;
+          // Otherwise close it
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide();
+        }
+
+        // Listen for both touchstart and click for snappy mobile response
+        main.addEventListener('touchstart', hideIfOpen, { passive: true });
+        main.addEventListener('click', hideIfOpen);
+      })();
     </script>
   </body>
 </html>

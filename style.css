@@ -59,28 +59,7 @@ body {
     padding-top: calc(var(--nav-offset) + 8px);
 }
 
-/* Skip link (hidden until focused) */
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-.skip-link:focus {
-    position: fixed;
-    left: 12px;
-    top: 12px;
-    width: auto;
-    height: auto;
-    padding: 0.5rem 0.75rem;
-    background: white;
-    color: var(--dark-text);
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    z-index: 2000;
-}
+/* skip-link removed per user request */
 
 /* Focus styles for keyboard users */
 .btn-schedule:focus,
