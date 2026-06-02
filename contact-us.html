@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Ursu Holistic Wellness</title>
+    <meta
+      name="description"
+      content="Contact Ursu Holistic Wellness to book reflexology services in Windsor, Ontario, view the clinic location, and find hours and contact details."
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=03182026" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="section hero minimal-hero" tabindex="-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="hero-content fade-in">
+                <p class="eyebrow">Contact Ursu Holistic Wellness</p>
+                <h1>Get in Touch</h1>
+                <p>Book your reflexology session, ask questions, or find the clinic in Windsor. Lori is ready to support your wellness journey.</p>
+                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section">
+        <div class="container">
+          <div class="row gx-5 gy-4">
+            <div class="col-xl-5 fade-in">
+              <div class="contact-sidebar">
+                <h2>Contact Information</h2>
+                  <a class="contact-card contact-card-link" href="tel:+15199968429">
+                  <div>
+                    <h3>Phone Number</h3>
+                    <p>519-996-8429</p>
+                  </div>
+                </a>
+                <a class="contact-card contact-card-link" href="mailto:Ursuholisticwellness@gmail.com">
+                  <div>
+                    <h3>Email</h3>
+                    <p>Ursuholisticwellness@gmail.com</p>
+                  </div>
+                </a>
+                <a class="contact-card contact-card-link" href="#" onclick="openMaps(); return false;">
+                  <div>
+                    <h3>Our Location</h3>
+                    <p>3335 Dougall Ave<br />Windsor, ON N9E 1S8</p>
+                  </div>
+                </a>
+                <div class="contact-card">
+                  <h3>Hours</h3>
+                  <p>Mon-Fri: 8am-6pm<br />Sat: 9am-2pm</p>
+                </div>
+                <div class="follow-us">
+                  <h3>Follow Us</h3>
+                  <a class="social-link" href="https://www.instagram.com/ursuholisticwellness/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> @ursuholisticwellness
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7">
+              <div class="contact-map-card fade-in">
+                <div class="contact-map-header">
+                  <div>
+                    <p class="map-label">Open in Maps</p>
+                    <p class="map-copy">Find the clinic location in Windsor.</p>
+                  </div>
+                  <button type="button" class="btn-review btn-review-sm" onclick="openMaps()" aria-label="Open location in maps">Open in Maps</button>
+                </div>
+                <iframe title="Map showing Ursu Holistic Wellness location" src="https://www.google.com/maps?q=3335+Dougall+Ave,+Windsor,+ON+N9E+1S8&output=embed" loading="lazy"></iframe>
+              </div>
+              <div class="contact-form-card fade-in mt-4">
+                <h3>Send Us a Message</h3>
+                <p>Have questions? Use the form below to send us a message. We will try to respond within 48 business hours.</p>
+                <form id="contactForm" onsubmit="return handleContactSubmit(event)">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <input id="contactFirstName" type="text" class="form-control" placeholder="First name" aria-label="First name" required />
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="contactLastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name" required />
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="contactEmail" type="email" class="form-control" placeholder="Email address" aria-label="Email address" required />
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="contactPhone" type="tel" class="form-control" placeholder="Phone Number" aria-label="Phone Number" />
+                    </div>
+                    <div class="col-12">
+                      <textarea id="contactMessage" class="form-control" rows="5" placeholder="Message" aria-label="Message" required></textarea>
+                    </div>
+                  </div>
+                  <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="contactConsentCheck" required />
+                    <label class="form-check-label" for="contactConsentCheck">I agree to be contacted by Ursu Holistic Wellness</label>
+                  </div>
+                  <button type="submit" class="btn-schedule mt-3">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer class="footer">
+      <div class="container footer-top">
+        <div id="site-footer"></div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openJaneApp() {
+        window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
+      }
+
+      function openMaps() {
+        const street = '3335 Dougall Ave';
+        const city = 'Windsor';
+        const region = 'ON';
+        const postal = 'N9E 1S8';
+        const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          url = `https://maps.apple.com/?daddr=${dest}`;
+        }
+        window.open(url, '_blank');
+      }
+
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const firstName = document.getElementById('contactFirstName').value.trim();
+        const lastName = document.getElementById('contactLastName').value.trim();
+        const email = document.getElementById('contactEmail').value.trim();
+        const phone = document.getElementById('contactPhone').value.trim();
+        const message = document.getElementById('contactMessage').value.trim();
+        const contactConsentCheck = document.getElementById('contactConsentCheck');
+
+        if (!contactConsentCheck.checked) {
+          alert('Please agree to be contacted by Ursu Holistic Wellness before sending.');
+          return false;
+        }
+
+        const subject = encodeURIComponent(`Ursu Holistic Wellness contact form from ${firstName} ${lastName}`);
+        const body = encodeURIComponent(
+          `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+        );
+
+        window.location.href = `mailto:UrsuHolisticWellness@gmail.com?subject=${subject}&body=${body}`;
+        return false;
+      }
+
+      function openGoogleReview() {
+        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
+      }
+
+
+      window.addEventListener('load', function () {
+        document.querySelectorAll('.fade-in').forEach((el) => {
+          el.classList.add('visible');
+        });
+      });
+    </script>
+    <script src="header-loader.js"></script>
+    <script src="footer-loader.js"></script>
+  </body>
+</html>

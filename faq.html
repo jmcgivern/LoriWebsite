@@ -1,0 +1,159 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | Ursu Holistic Wellness</title>
+    <meta
+      name="description"
+      content="Frequently asked questions about reflexology sessions, booking, and what to expect at Ursu Holistic Wellness in Windsor, Ontario."
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=03182026" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="section hero minimal-hero" tabindex="-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="hero-content fade-in">
+                <p class="eyebrow">Frequently Asked Questions</p>
+                <h1>Answers for New and Returning Clients</h1>
+                <p>Everything you need to know before your next reflexology visit, from appointment length to what to wear.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="container">
+          <div class="faq-accordion fade-in" id="faqAccordion">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                <span class="question-text">What is reflexology?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-1" hidden>
+                <p>reflexology therapy is a gentle therapy that applies pressure to reflex points on the feet, hands, and face. These points correspond to organs and systems throughout the body, helping to support relaxation and natural balance.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                <span class="question-text">How should I prepare for my appointment?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-2" hidden>
+                <p>Wear comfortable clothing and bring any helpful health information. Drink water before and after your session, and arrive a few minutes early.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                <span class="question-text">How long is a reflexology session?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-3" hidden>
+                <p>Most visits are 60 to 75 minutes, including intake and discussion. The treatment itself typically lasts about 45 to 55 minutes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                <span class="question-text">Is reflexology safe?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-4" hidden>
+                <p>Yes, reflexology is generally safe when performed by a trained therapist. Lori discusses your health history and adapts pressure for comfort and safety.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                <span class="question-text">Can I receive reflexology if I am pregnant?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-5" hidden>
+                <p>Lori offers pregnancy-safe reflexology therapy. She evaluates each client individually and follows best-practice guidelines for prenatal care.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                <span class="question-text">Do you accept new patients?</span>
+                <span class="faq-icon"></span>
+              </button>
+              <div class="faq-answer" id="faq-6" hidden>
+                <p>Yes. New patients are welcome at Ursu Holistic Wellness. Book online or contact the clinic to schedule your first visit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer class="footer">
+      <div class="container footer-top">
+        <div id="site-footer"></div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openJaneApp() {
+        window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
+      }
+
+      function openMaps() {
+        const street = '3335 Dougall Ave';
+        const city = 'Windsor';
+        const region = 'ON';
+        const postal = 'N9E 1S8';
+        const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          url = `https://maps.apple.com/?daddr=${dest}`;
+        }
+        window.open(url, '_blank');
+      }
+
+      function openGoogleReview() {
+        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
+      }
+
+
+      // FAQ Accordion functionality
+      document.querySelectorAll('.faq-question').forEach((button) => {
+        button.addEventListener('click', () => {
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          const answerId = button.getAttribute('aria-controls');
+          const answer = document.getElementById(answerId);
+
+          if (isExpanded) {
+            button.setAttribute('aria-expanded', 'false');
+            answer.setAttribute('hidden', '');
+            answer.classList.remove('show');
+          } else {
+            button.setAttribute('aria-expanded', 'true');
+            answer.removeAttribute('hidden');
+            answer.classList.add('show');
+          }
+        });
+      });
+
+      window.addEventListener('load', function () {
+        document.querySelectorAll('.fade-in').forEach((el) => {
+          el.classList.add('visible');
+        });
+      });
+    </script>
+    <script src="header-loader.js"></script>
+    <script src="footer-loader.js"></script>
+  </body>
+</html>

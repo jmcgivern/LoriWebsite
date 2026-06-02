@@ -1,0 +1,125 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Ursu Holistic Wellness</title>
+    <meta
+      name="description"
+      content="Explore the reflexology services available at Ursu Holistic Wellness, including hand, foot, and facial reflexology tailored for holistic well-being."
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=03182026" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="section hero minimal-hero" tabindex="-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="hero-content fade-in">
+                <p class="eyebrow">Professional Reflexology Services</p>
+                <h1>Services</h1>
+                <p>Discover how personalized reflexology can support pain relief, relaxation, and whole-body wellness.</p>
+                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Book a Service">Book a Service</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="container">
+          <h2 class="section-title fade-in">Reflexology Treatment Options</h2>
+          <div class="row g-4">
+            <div class="col-md-4 fade-in">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-hand-paper"></i>
+                </div>
+                <h4>Hand Reflexology</h4>
+                <p>Carefully applied pressure to reflex points in the hands, supporting overall balance and soothing tension.</p>
+              </div>
+            </div>
+            <div class="col-md-4 fade-in">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-shoe-prints"></i>
+                </div>
+                <h4>Foot Reflexology</h4>
+                <p>Deeply relaxing treatment that targets key nervous system zones while you rest comfortably in a quiet environment.</p>
+              </div>
+            </div>
+            <div class="col-md-4 fade-in">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fas fa-spa"></i>
+                </div>
+                <h4>Face Reflexology</h4>
+                <p>A gentle facial treatment combined with lymphatic support, gua sha, and facial cupping for relaxation and circulation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-4">
+            <div class="col-lg-6 fade-in">
+              <div class="info-card">
+                <h3>Session Lengths</h3>
+                <p>Sessions are tailored to each client, usually 60 to 75 minutes inclusive of consultation and treatment.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 fade-in">
+              <div class="info-card">
+                <h3>Personalized Care</h3>
+                <p>Lori customizes each treatment based on your health history, goals, and comfort preferences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer class="footer">
+      <div class="container footer-top">
+        <div id="site-footer"></div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openJaneApp() {
+        window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
+      }
+
+      function openMaps() {
+        const street = '3335 Dougall Ave';
+        const city = 'Windsor';
+        const region = 'ON';
+        const postal = 'N9E 1S8';
+        const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          url = `https://maps.apple.com/?daddr=${dest}`;
+        }
+        window.open(url, '_blank');
+      }
+
+      function openGoogleReview() {
+        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
+      }
+
+
+      window.addEventListener('load', function () {
+        document.querySelectorAll('.fade-in').forEach((el) => {
+          el.classList.add('visible');
+        });
+      });
+    </script>
+    <script src="header-loader.js"></script>
+    <script src="footer-loader.js"></script>
+  </body>
+</html>

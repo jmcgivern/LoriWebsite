@@ -1,363 +1,116 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ursu Holistic Wellness | Reflexology in Windsor, ON</title>
+    <title>Ursu Holistic Wellness | reflexology therapy in Windsor, ON</title>
     <meta
       name="description"
-      content="Ursu Holistic Wellness offers professional reflexology services including hand, foot, and facial reflexology in Windsor, Ontario. Book your wellness session today."
+      content="Ursu Holistic Wellness offers professional reflexology services in Windsor, Ontario. Discover holistic care for hand, foot, and facial reflexology."
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css?v=03182026" />
   </head>
   <body>
-  <!-- Navigation -->
-  <header role="banner">
-  <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Primary navigation">
-      <div class="container">
-        <a class="navbar-brand" href="#home">Ursu Holistic Wellness</a>
+    <div id="site-header"></div>
 
-        <!-- Mobile row: keep brand above, then show compact address + toggler on one line -->
-        <div class="d-flex d-md-none align-items-center justify-content-between w-100">
-          <button type="button" class="nav-address-mobile" onclick="openMaps()" aria-label="Open address in maps" title="3335 Dougall Ave, Windsor, ON N9E 1S8">3335 Dougall Ave, Windsor</button>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileNav"
-            aria-controls="mobileNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-
-        <!-- Desktop nav links (visible md+). Kept inside the navbar for desktop layout. -->
-        <ul class="navbar-nav me-auto d-none d-md-flex">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Lori</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reflexology">About Reflexology</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Desktop controls: address + schedule (shown md+ only). Kept outside the collapse so the collapsed menu doesn't contain the address. -->
-        <div class="d-none d-md-flex align-items-center ms-auto">
-          <button type="button" class="nav-address me-2" onclick="openMaps()" aria-label="Open address in maps" title="Open in Maps">3335 Dougall Ave,<br/>Windsor, ON N9E 1S8</button>
-          <button type="button" class="btn-schedule d-none d-md-inline" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
-        </div>
-      </div>
-  </nav>
-  <!-- Mobile collapse placed outside the fixed navbar so when it opens it pushes page content down instead of overlaying it -->
-  <div class="collapse d-md-none" id="mobileNav">
-    <div class="mobile-nav-panel bg-light p-3">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About Lori</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#reflexology">About Reflexology</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-      <div class="mt-3">
-        <button type="button" class="btn-schedule w-100" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
-      </div>
-    </div>
-  </div>
-  </header>
-
-  <!-- Hero Section -->
-  <main id="main-content">
-  <section id="home" class="hero" tabindex="-1">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content fade-in">
-              <h1>Reflexology & Wellness Care</h1>
-              <p>
-                Expert care combining therapeutic reflexology and personalized wellness to support your healing journey.
-              </p>
-              <button type="button" class="btn-schedule me-3" onclick="openJaneApp()" aria-label="Book Your Session">Book Your Session</button>
+    <main id="main-content">
+      <section id="home" class="hero" tabindex="-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="hero-content fade-in">
+                <p class="eyebrow">reflexology therapy & Wellness Care</p>
+                <h1>Holistic reflexology therapy for Balance and Relief</h1>
+                <p>Experience personalized hand, foot, and facial reflexology in a calm Windsor clinic designed for your comfort and recovery.</p>
+                <button type="button" class="btn-schedule me-3" onclick="openJaneApp()" aria-label="Book Your Session">Book Your Session</button>
+              </div>
             </div>
-          </div>
-
-            <!-- hero now contains core messaging and (on md+) a supporting image to the right -->
             <div class="col-lg-6 d-none d-md-flex justify-content-center">
               <div class="hero-image-wrapper">
                 <img src="images/LoriWorkingOnFeet.png" alt="Lori working on feet" class="hero-image" />
               </div>
             </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <h2 class="section-title fade-in">About Lori Ursu</h2>
-        <div class="row align-items-center">
-          <div class="col-lg-6 fade-in">
-            <div class="photo-wrapper">
-              <a href="images/lori cover photo.jpeg" target="_blank" rel="noopener">
-                <img
-                  src="images/lori cover photo.jpeg"
-                  alt="Lori Ursu - Health & Wellness"
-                  class="about-photo clickable-image"
-                />
-              </a>
-            </div>
           </div>
-          <div class="col-lg-6 fade-in">
-            <h3 class="mb-4">Your Partner in Health & Wellness</h3>
-            <p class="mb-4">
-              With over 16 years of diverse healthcare experience, Lori Ursu
-              brings a unique combination of perioperative nursing expertise,
-              emergency care knowledge, and holistic wellness practices to
-              provide comprehensive patient care.
-            </p>
-            <p class="mb-4">
-              Her extensive background spans perioperative nursing, emergency
-              room care, and reflexology therapy. Lori believes in treating the
-              whole person through evidence-based medical care combined with
-              natural wellness approaches to promote healing and optimal health.
-            </p>
-            <!-- Inspiration: grandfather image -->
-            <div class="inspiration mb-4">
-              <h5>Inspiration</h5>
-              <div class="row">
-                <div class="col-4">
-                  <!-- Image: Lori and her grandfather (click to open full image) -->
-                  <a href="images/LoriAndGrandfather.png" target="_blank" rel="noopener">
-                    <img src="images/LoriAndGrandfather.png" alt="Lori's grandfather" class="about-thumb clickable-image" />
-                  </a>
-                </div>
-                <div class="col-8">
-                  <p>
-                    Lori's interest in reflexology was inspired by time spent with her grandfather, who taught her the importance of holistic care and reflexology techniques.
-                  </p>
-                </div>
+        </div>
+      </section>
+
+      <section id="conditions-summary" class="section">
+        <div class="container">
+          <div class="text-center fade-in">
+            <h2 class="section-title">Reflexology for Life's Challenges</h2>
+            <p>Whether you're managing stress, supporting recovery, or seeking preventive wellness care, reflexology therapy can help.</p>
+          </div>
+          <div class="row mt-4 g-4">
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Workplace Stress & Tension</h4>
+                <p>Release accumulated tension from desk work and demanding schedules. Feel calmer and more focused after your session.</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6">
-                  <h5>Education</h5>
-                <p>
-                  Nursing Diploma (<b>St. Clair College</b>)<br />Perioperative
-                  Nursing (<b>Mohawk College</b>)
-                </p>
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Sleep Challenges</h4>
+                <p>Improve sleep quality and fall asleep more easily with reflexology's calming effect on your nervous system.</p>
               </div>
-              <div class="col-6">
-                  <h5>Certifications</h5>
-                <p>
-                  Registered Canadian Reflexology Therapist<br />Perioperative
-                  Nursing<br />Registered Practical Nurse
-                </p>
+            </div>
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Chronic Pain & Tension</h4>
+                <p>Find relief from ongoing muscle tightness, headaches, and discomfort with targeted reflex point work.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Post-Injury Recovery</h4>
+                <p>Support your body's natural healing process after injury, surgery, or physical strain with gentle, safe therapy.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Hormonal & Digestive Support</h4>
+                <p>Help balance hormones and support digestive wellness through reflex zones that correspond to these systems.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 fade-in">
+              <div class="condition-card">
+                <h4>Proactive Wellness</h4>
+                <p>Maintain balance and prevent burnout with regular reflexology sessions as part of your self-care routine.</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Services Section (Reflexology) -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title fade-in">Reflexology Services</h2>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in" tabindex="0">
-              <div class="service-icon">
-                <img src="images/HandReflexology_Bubble.png" alt="Hand reflexology" class="service-bubble" />
-              </div>
-              <h4>Hand Reflexology</h4>
-              <p>
-                Pressure is applied to various reflex points in the hands to alleviate symptoms in other areas of the body.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in" tabindex="0">
-              <div class="service-icon">
-                <img src="images/FootReflexology_Bubble.png" alt="Foot reflexology" class="service-bubble" />
-              </div>
-              <h4>Foot Reflexology</h4>
-              <p>
-                Using specific hand and finger techniques, the foot is stimulated to relieve health conditions in other parts of the body.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-card fade-in" tabindex="0">
-              <div class="service-icon">
-                <img src="images/Face_Reflexology_Bubble.png" alt="Face reflexology" class="service-bubble" />
-              </div>
-              <h4>Face Reflexology</h4>
-              <p>
-                By applying pressure to specific points of the face, corresponding organs and systems in the body are targeted. Lori begins facial sessions with manual lymph drainage, then reflexology on the decolletage, neck, and face, followed by gua sha and facial cupping.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Reflexology -->
-    <section id="reflexology" class="section about-section">
-      <div class="container">
-        <h2 class="section-title fade-in">About Reflexology Therapy</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto fade-in">
-            <p>
-              Hand, foot, and face reflexology are holistic therapies based on the idea that specific points on the hands, feet, and face correspond to organs and systems throughout the body. Reflexology therapists are specialists who undergo specific training and certification, different from that of massage therapists.
-            </p>
-            <!-- Benefits and comparison images — simplified (figure + caption) -->
-            <div class="my-4">
-              <div class="row g-3 align-items-center">
-                <figure class="col-md-6 text-center reflex-figure benefits-figure">
-                  <a href="images/Benefits_Of_Reflexology.png" target="_blank" rel="noopener">
-                    <img src="images/Benefits_Of_Reflexology.png" alt="Benefits of Reflexology" class="reflex-col-image clickable-image img-fluid" />
-                  </a>
-                </figure>
-                <figure class="col-md-6 text-center reflex-figure comparison-figure">
-                  <a href="images/Massage Vs Reflexology AI Generated.png" target="_blank" rel="noopener">
-                    <img src="images/Massage Vs Reflexology AI Generated.png" alt="Reflexology vs Massage" class="reflex-col-image clickable-image img-fluid" />
-                  </a>
-                </figure>
-              </div>
-            </div>
-
-            <!-- Ancient practice image (kept centered) -->
-            <div class="my-4 text-center">
-              <a href="images/Ancient_Reflexology.png" target="_blank" rel="noopener">
-                <img src="images/Ancient_Reflexology.png" alt="Ancient practice of reflexology" class="reflex-image clickable-image" />
-              </a>
-            </div>
-
-            <!-- Moved and restyled reference link -->
-            <div class="reflex-more text-center mb-4">
-              <span class="muted-label">Learn more about Reflexology at</span>
-              <div><a class="reflex-link" href="https://www.reflexologycanada.org/en/" target="_blank" rel="noopener">reflexologycanada.org</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <!-- Testimonials removed per request -->
-
-  </main>
-
-  <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2 class="section-title fade-in">Get In Touch</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="contact-info fade-in">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                      <div>
-                        <h5>Location</h5>
-                        <p><button type="button" class="address-link" onclick="openMaps()" aria-label="Open location in maps">3335 Dougall Ave, Windsor, ON N9E 1S8, Canada</button></p>
-                      </div>
-                  </div>
-                  <div class="contact-item social-media">
-                    <i class="fas fa-share-alt"></i>
-                    <div>
-                      <h5>Social</h5>
-                      <p>
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-lg me-2"></i></a>
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg me-2"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                      <h5>Email</h5>
-                      <p>UrsuHolisticWellness@gmail.com</p>
-                    </div>
-                  </div>
-                  <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                      <h5>Hours</h5>
-                      <p>Mon-Fri: 8am-6pm<br />Sat: 9am-2pm</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="map-wrapper mt-4">
-                <iframe title="Map showing Ursu Holistic Wellness location" src="https://www.google.com/maps?q=3335+Dougall+Ave,+Windsor,+ON+N9E+1S8&output=embed" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-              <div class="text-center mt-4">
-                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Schedule Your Appointment">Schedule Your Appointment</button>
+      <section class="section contact-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto fade-in text-center">
+              <h2 class="section-title">Ready to book?</h2>
+              <p>Whether you are a first-time visitor or returning client, scheduling your reflexology session is easy and welcoming.</p>
+              <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-3">
+                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
+                <a class="inline-link" href="contact-us.html">Contact Us</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 Ursu Holistic Wellness. All rights reserved.</p>
+        <footer class="footer">
+      <div class="container footer-top">
+        <div id="site-footer"></div>
       </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ursu Holistic Wellness",
-      "description": "Professional reflexology and holistic wellness services in Windsor, Ontario.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3335 Dougall Ave",
-        "addressLocality": "Windsor",
-        "addressRegion": "ON",
-        "postalCode": "N9E 1S8",
-        "addressCountry": "CA"
-      }
-    }
-    </script>
     <script>
-      // Jane App Integration - Replace with actual Jane App URL
       function openJaneApp() {
-        // Replace this URL with the actual Jane App booking link
         window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
       }
 
-      // Open maps/directions. Uses Apple Maps on iOS and Google Maps otherwise.
       function openMaps() {
         const street = '3335 Dougall Ave';
         const city = 'Windsor';
@@ -366,190 +119,24 @@
         const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
         const ua = navigator.userAgent || navigator.vendor || window.opera;
         let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
-        // On iOS prefer Apple Maps
         if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
           url = `https://maps.apple.com/?daddr=${dest}`;
         }
         window.open(url, '_blank');
       }
 
-      // Smooth scrolling for navigation links with offset for fixed navbar
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        const href = anchor.getAttribute('href');
-        // ignore plain '#' anchors (social placeholders)
-        if (!href || href === "#") return;
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          // compute navbar height to offset the scroll so the heading is visible
-          const navbar = document.querySelector('.navbar');
-          const navbarHeight = navbar ? navbar.offsetHeight : parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-offset')) || 80;
-          if (target) {
-            const targetY = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 12; // small extra gap
-            window.scrollTo({ top: targetY, behavior: 'smooth' });
-          }
-        });
-      });
-
-      // Fade in animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, observerOptions);
-
-      // Observe all fade-in elements
-      document.querySelectorAll(".fade-in").forEach((el) => {
-        observer.observe(el);
-      });
-
-      // Initial setup: compute navbar height (used for CSS var and scroll offset), and fade-in hero
-      function updateNavOffset() {
-        const navbar = document.querySelector('.navbar');
-        const navHeight = navbar ? navbar.offsetHeight : 80;
-        document.documentElement.style.setProperty('--nav-offset', navHeight + 'px');
+      function openGoogleReview() {
+        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
       }
 
+
       window.addEventListener('load', function () {
-        updateNavOffset();
-        // ensure hero content fades in
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) heroContent.classList.add('visible');
-      });
-
-      // Update offset on resize in case navbar height changes (mobile toggle, font size, etc.)
-      window.addEventListener('resize', function () {
-        updateNavOffset();
-      });
-
-      // Mobile menu close on link click
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          const navbarCollapse = document.getElementById('mobileNav') || document.querySelector(".navbar-collapse");
-          if (navbarCollapse && navbarCollapse.classList.contains("show")) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-          }
+        document.querySelectorAll('.fade-in').forEach((el) => {
+          el.classList.add('visible');
         });
       });
-
-      // Close mobile menu when tapping/clicking the main content area (useful on phones)
-      (function() {
-        const main = document.getElementById('main-content');
-        const navbarCollapse = document.getElementById('mobileNav') || document.querySelector('.navbar-collapse');
-        if (!main || !navbarCollapse) return;
-
-        function hideIfOpen(e) {
-          // If the navbar isn't open, nothing to do
-          if (!navbarCollapse.classList.contains('show')) return;
-          // Ignore clicks inside the navbar or on the toggler
-          if (e.target.closest('.navbar') || e.target.closest('.navbar-toggler') || e.target.closest('.navbar-collapse')) return;
-          // Otherwise close it
-          const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-          bsCollapse.hide();
-        }
-
-        // Listen for both touchstart and click for snappy mobile response
-        main.addEventListener('touchstart', hideIfOpen, { passive: true });
-        main.addEventListener('click', hideIfOpen);
-      })();
-
-      // Floating mobile Schedule button: show when hero CTA scrolls out of view
-      (function() {
-        // Only run on mobile (md breakpoint and below)
-        const isMobile = () => window.matchMedia('(max-width: 767.98px)').matches;
-        const heroCTA = document.querySelector('#home .btn-schedule');
-        if (!heroCTA) return;
-
-        // Create the floating button markup and insert into DOM
-        const floatBtn = document.createElement('button');
-        floatBtn.id = 'floatingSchedule';
-        floatBtn.className = 'floating-schedule d-md-none';
-        floatBtn.setAttribute('aria-label', 'Schedule Appointment');
-        floatBtn.type = 'button';
-        floatBtn.innerHTML = 'Schedule';
-        floatBtn.addEventListener('click', function () { openJaneApp(); });
-        document.body.appendChild(floatBtn);
-
-        // Use IntersectionObserver to watch the hero CTA visibility
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (!isMobile()) {
-              // ensure hidden on desktop
-              floatBtn.classList.remove('show');
-              return;
-            }
-            // If the CTA is NOT intersecting, show the floating button
-            if (!entry.isIntersecting) {
-              floatBtn.classList.add('show');
-            } else {
-              floatBtn.classList.remove('show');
-            }
-          });
-        }, { threshold: 0 });
-
-        observer.observe(heroCTA);
-
-        // Also hide/show on resize to respect breakpoint changes
-        window.addEventListener('resize', function () {
-          if (!isMobile()) {
-            floatBtn.classList.remove('show');
-          } else {
-            // trigger observer callback by unobserving/observing
-            observer.unobserve(heroCTA);
-            observer.observe(heroCTA);
-          }
-        });
-      })();
-
-      // When the mobile navbar opens, hide the persistent mobile address (so it doesn't appear inside the panel)
-      // and push the main content down by the menu height so the panel doesn't overlay content.
-      (function() {
-        const navbarCollapse = document.getElementById('mobileNav') || document.querySelector('.navbar-collapse');
-        const navAddressMobile = document.querySelector('.nav-address-mobile');
-        const main = document.getElementById('main-content');
-        if (!navbarCollapse || !main) return;
-
-        // Helper to detect mobile (Bootstrap md breakpoint)
-        const isMobile = () => window.matchMedia('(max-width: 767.98px)').matches;
-
-        // When the collapse has fully opened, hide the mobile address and prevent background scroll.
-        // For the dedicated #mobileNav we keep the panel fixed under the navbar so it doesn't require scrolling to open.
-        navbarCollapse.addEventListener('shown.bs.collapse', function () {
-          if (!isMobile()) return;
-          // hide the floating mobile address while the menu is open (prevents duplicate appearance)
-          if (navAddressMobile) navAddressMobile.style.display = 'none';
-          // If this is the mobileNav panel, add a body class to prevent background scrolling
-          if (navbarCollapse.id === 'mobileNav') {
-            document.body.classList.add('mobile-nav-open');
-          }
-        });
-
-        // Before the collapse starts closing, restore the address (so it reappears immediately)
-        navbarCollapse.addEventListener('hide.bs.collapse', function () {
-          if (!isMobile()) return;
-          if (navAddressMobile) navAddressMobile.style.display = '';
-          if (navbarCollapse.id === 'mobileNav') {
-            document.body.classList.remove('mobile-nav-open');
-          }
-        });
-
-        // After the collapse finishes closing, ensure any temporary layout changes are cleared
-        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-          if (!isMobile()) return;
-          if (navbarCollapse.id !== 'mobileNav') {
-            // Legacy behavior: if we used to add margins for a different collapse, clear them
-            main.style.marginTop = '';
-          }
-        });
-      })();
     </script>
+    <script src="header-loader.js"></script>
+    <script src="footer-loader.js"></script>
   </body>
 </html>
