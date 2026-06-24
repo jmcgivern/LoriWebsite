@@ -3,62 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | Ursu Holistic Wellness</title>
+    <title>Contact Us & Book | Ursu Holistic Wellness</title>
     <meta
       name="description"
-      content="Contact Ursu Holistic Wellness to book reflexology services in Windsor, Ontario, view the clinic location, and find hours and contact details."
+      content="Book your reflexology services at our Windsor or Kingsville clinic location, view interactive maps, and get in touch with Ursu Holistic Wellness."
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css?v=03182026" />
+    <style>
+      /* Hover style for clickable address blocks */
+      .address-map-link {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        transition: color 0.25s ease;
+      }
+      .address-map-link:hover, .address-map-link:focus {
+        color: var(--primary-color, #9FC559);
+        text-decoration: underline;
+      }
+      .map-embed-wrapper {
+        border: 1px solid rgba(46,139,87,0.1);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <div id="site-header"></div>
 
     <main id="main-content">
+      <!-- Hero Section -->
       <section class="section hero minimal-hero" tabindex="-1">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7">
               <div class="hero-content fade-in">
-                <p class="eyebrow">Contact Ursu Holistic Wellness</p>
-                <h1>Get in Touch</h1>
-                <p>Book your reflexology session, ask questions, or find the clinic in Windsor. Lori is ready to support your wellness journey.</p>
-                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
+                <p class="eyebrow">Ursu Holistic Wellness</p>
+                <h1>Book Your Session</h1>
+                <p>We now offer reflexology therapy services at two locations in Windsor and Kingsville. Select your preferred clinic below to book, or send a message with any questions.</p>
+                <a href="#locations" class="btn-schedule d-inline-block text-decoration-none" aria-label="Select clinic location to book">Select Location to Book</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Locations & Booking Section -->
+      <section id="locations" class="section locations-section">
+        <div class="container">
+          <div class="text-center fade-in mb-5">
+            <h2 class="section-title">Our Locations & Booking Sites</h2>
+            <p class="mt-3">Choose the location and schedule that best fits your wellness routine.</p>
+          </div>
+          
+          <div class="row g-4">
+            <!-- Location 1: Windsor -->
+            <div class="col-md-6 fade-in">
+              <div class="info-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <span class="eyebrow">Mondays, Wednesdays, Fridays & Select Saturdays</span>
+                  <h3 class="mt-2 text-primary">Windsor Location</h3>
+                  
+                  <!-- Clickable Address -->
+                  <a href="#" onclick="openWindsorMaps(); return false;" class="address-map-link mb-3" title="Click to open directions in maps">
+                    <strong>DMC Chiropractic (Suite 201)</strong><br />
+                    3335 Dougall Ave<br />
+                    Windsor, ON N9E 1S8 <i class="fas fa-external-link-alt fa-xs ms-1"></i>
+                  </a>
+
+                  <!-- Embedded Interactive Map -->
+                  <div class="map-embed-wrapper mt-3 mb-3">
+                    <iframe title="Windsor clinic location map" src="https://www.google.com/maps?q=DMC+Chiropractic,+3335+Dougall+Ave,+Windsor,+ON+N9E+1S8&output=embed" width="100%" height="200" style="border:0;" loading="lazy"></iframe>
+                  </div>
+                  
+                  <h5 class="mt-4 mb-2"><i class="far fa-clock me-2 text-success"></i>Availability:</h5>
+                  <ul class="list-unstyled ps-3 mb-4">
+                    <li class="mb-1"><strong>Monday:</strong> 10:00 AM - 7:00 PM</li>
+                    <li class="mb-1"><strong>Wednesday:</strong> 9:00 AM - 5:00 PM</li>
+                    <li class="mb-1"><strong>Friday:</strong> 10:00 AM - 4:00 PM</li>
+                    <li class="mb-1"><strong>Select Saturdays:</strong> 9:00 AM - 3:00 PM</li>
+                  </ul>
+
+                  <h5 class="mt-4 mb-2"><i class="fas fa-info-circle me-2 text-success"></i>Clinic Details:</h5>
+                  <p class="mb-3">
+                    DMC office is located up on the 1st floor (take elevator or stairs) to Suite 201 (immediate left out of elevator).
+                  </p>
+                  <ul class="feature-list mt-2">
+                    <li>Wheelchair accessible</li>
+                    <li>FREE parking in parking lot</li>
+                  </ul>
+                </div>
+                
+                <div class="mt-4 pt-3">
+                  <button type="button" class="btn-schedule w-100 py-3 fs-5 border-0 text-center d-block" onclick="openWindsorJaneApp()" aria-label="Book Windsor Session on Jane App">Schedule Windsor Appointment</button>
+                  <button type="button" class="btn btn-outline-secondary w-100 mt-2 py-2" onclick="openWindsorMaps()" aria-label="Open Windsor clinic location in Google Maps"><i class="fas fa-map-marker-alt me-2"></i>Open in Maps</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location 2: Kingsville -->
+            <div class="col-md-6 fade-in">
+              <div class="info-card h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <span class="eyebrow">Tuesdays & Thursdays</span>
+                  <h3 class="mt-2 text-primary">Kingsville Location</h3>
+                  
+                  <!-- Clickable Address -->
+                  <a href="#" onclick="openKingsvilleMaps(); return false;" class="address-map-link mb-3" title="Click to open directions in maps">
+                    <strong>Elements Osteopathy & Wellness</strong><br />
+                    313 Main St E<br />
+                    Kingsville, ON N9Y 1A7 <i class="fas fa-external-link-alt fa-xs ms-1"></i>
+                  </a>
+
+                  <!-- Embedded Interactive Map -->
+                  <div class="map-embed-wrapper mt-3 mb-3">
+                    <iframe title="Kingsville clinic location map" src="https://www.google.com/maps?q=Elements+Osteopathy+%26+Wellness,+313+Main+St+E+Unit+11,+Kingsville,+ON+N9Y+1A7&output=embed" width="100%" height="200" style="border:0;" loading="lazy"></iframe>
+                  </div>
+                  
+                  <h5 class="mt-4 mb-2"><i class="far fa-clock me-2 text-success"></i>Availability:</h5>
+                  <ul class="list-unstyled ps-3 mb-4">
+                    <li class="mb-1"><strong>Tuesday:</strong> 8:00 AM - 7:00 PM</li>
+                    <li class="mb-1"><strong>Thursday:</strong> 8:00 AM - 7:00 PM</li>
+                  </ul>
+
+                  <h5 class="mt-4 mb-2"><i class="fas fa-info-circle me-2 text-success"></i>Clinic Details:</h5>
+                  <p class="mb-3">
+                    Conveniently situated inside the peaceful clinic environment of Elements Osteopathy & Wellness.
+                  </p>
+                  <ul class="feature-list mt-2">
+                    <li>Wheelchair accessible</li>
+                    <li>FREE parking in Parking lot</li>
+                  </ul>
+                </div>
+                
+                <div class="mt-4 pt-3">
+                  <button type="button" class="btn-schedule w-100 py-3 fs-5 border-0 text-center d-block" onclick="openKingsvilleBookingApp()" aria-label="Book Kingsville Session on Vagaro">Schedule Kingsville Appointment</button>
+                  <button type="button" class="btn btn-outline-secondary w-100 mt-2 py-2" onclick="openKingsvilleMaps()" aria-label="Open Kingsville clinic location in Google Maps"><i class="fas fa-map-marker-alt me-2"></i>Open in Maps</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Info & Send Message Form Section (Bottom) -->
       <section class="section contact-section">
         <div class="container">
           <div class="row gx-5 gy-4">
+            <!-- Sidebar (No Our Location Entry) -->
             <div class="col-xl-5 fade-in">
               <div class="contact-sidebar">
-                <h2>Contact Information</h2>
-                  <a class="contact-card contact-card-link" href="tel:+15199968429">
-                  <div>
-                    <h3>Phone Number</h3>
-                    <p>519-996-8429</p>
-                  </div>
-                </a>
-                <a class="contact-card contact-card-link" href="mailto:Ursuholisticwellness@gmail.com">
-                  <div>
-                    <h3>Email</h3>
-                    <p>Ursuholisticwellness@gmail.com</p>
-                  </div>
-                </a>
-                <a class="contact-card contact-card-link" href="#" onclick="openMaps(); return false;">
-                  <div>
-                    <h3>Our Location</h3>
-                    <p>3335 Dougall Ave<br />Windsor, ON N9E 1S8</p>
-                  </div>
-                </a>
-                <div class="contact-card">
-                  <h3>Hours</h3>
-                  <p>Mon-Fri: 8am-6pm<br />Sat: 9am-2pm</p>
-                </div>
+                <h2>Contact Information</h2>mon
+         <div class="contact-card">
+    <h3>Phone Number</h3>
+    <p>519-996-8429</p>
+  </div>
+              
+  <div class="contact-card">
+    <h3>Email Address</h3>
+    <p>Ursuholisticwellness@gmail.com</p>
+  </div>
+                
                 <div class="follow-us">
                   <h3>Follow Us</h3>
                   <a class="social-link" href="https://www.instagram.com/ursuholisticwellness/" target="_blank" rel="noopener noreferrer">
@@ -67,18 +174,10 @@
                 </div>
               </div>
             </div>
+            
+            <!-- Message Form -->
             <div class="col-xl-7">
-              <div class="contact-map-card fade-in">
-                <div class="contact-map-header">
-                  <div>
-                    <p class="map-label">Open in Maps</p>
-                    <p class="map-copy">Find the clinic location in Windsor.</p>
-                  </div>
-                  <button type="button" class="btn-review btn-review-sm" onclick="openMaps()" aria-label="Open location in maps">Open in Maps</button>
-                </div>
-                <iframe title="Map showing Ursu Holistic Wellness location" src="https://www.google.com/maps?q=3335+Dougall+Ave,+Windsor,+ON+N9E+1S8&output=embed" loading="lazy"></iframe>
-              </div>
-              <div class="contact-form-card fade-in mt-4">
+              <div class="contact-form-card fade-in">
                 <h3>Send Us a Message</h3>
                 <p>Have questions? Use the form below to send us a message. We will try to respond within 48 business hours.</p>
                 <form id="contactForm" onsubmit="return handleContactSubmit(event)">
@@ -103,7 +202,7 @@
                     <input class="form-check-input" type="checkbox" id="contactConsentCheck" required />
                     <label class="form-check-label" for="contactConsentCheck">I agree to be contacted by Ursu Holistic Wellness</label>
                   </div>
-                  <button type="submit" class="btn-schedule mt-3">Send Message</button>
+                  <button type="submit" class="btn-schedule border-0 mt-3">Send Message</button>
                 </form>
               </div>
             </div>
@@ -112,7 +211,7 @@
       </section>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
       <div class="container footer-top">
         <div id="site-footer"></div>
       </div>
@@ -120,15 +219,33 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-      function openJaneApp() {
+      function openWindsorJaneApp() {
         window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
       }
 
-      function openMaps() {
+      function openKingsvilleBookingApp() {
+        window.open("https://www.vagaro.com/elementsosteopathyandwellness", "_blank");
+      }
+
+      function openWindsorMaps() {
         const street = '3335 Dougall Ave';
         const city = 'Windsor';
         const region = 'ON';
         const postal = 'N9E 1S8';
+        const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          url = `https://maps.apple.com/?daddr=${dest}`;
+        }
+        window.open(url, '_blank');
+      }
+
+      function openKingsvilleMaps() {
+        const street = '313 Main St E Unit 11';
+        const city = 'Kingsville';
+        const region = 'ON';
+        const postal = 'N9Y 1A7';
         const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
         const ua = navigator.userAgent || navigator.vendor || window.opera;
         let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
@@ -160,11 +277,6 @@
         window.location.href = `mailto:UrsuHolisticWellness@gmail.com?subject=${subject}&body=${body}`;
         return false;
       }
-
-      function openGoogleReview() {
-        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
-      }
-
 
       window.addEventListener('load', function () {
         document.querySelectorAll('.fade-in').forEach((el) => {

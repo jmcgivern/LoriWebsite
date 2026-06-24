@@ -91,7 +91,6 @@
               <p>Whether you are a first-time visitor or returning client, scheduling your reflexology session is easy and welcoming.</p>
               <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-3">
                 <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Schedule Appointment">Schedule Appointment</button>
-                <a class="inline-link" href="contact-us.html">Contact Us</a>
               </div>
             </div>
           </div>
@@ -108,8 +107,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
       function openJaneApp() {
-        window.open("https://loriursuholisticwellness.janeapp.com/", "_blank");
-      }
+  // Gracefully redirects to the central booking and locations page
+  window.location.href = "contact-us.html#locations";
+}
 
       function openMaps() {
         const street = '3335 Dougall Ave';
