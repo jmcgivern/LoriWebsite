@@ -14,10 +14,11 @@ function loadFooter() {
       <nav class="footer-sitemap" aria-label="Footer site navigation">
         <a href="index.html">Home</a>
         <a href="meet-lori.html">Meet Lori</a>
-        <a href="new-patient-experience.html">New Patient Experience</a>
-        <a href="faq.html">FAQ</a>
-        <a href="benefits-of-reflexology.html">Benefits of reflexology therapy</a>
+        <a href="benefits-of-reflexology.html">Benefits of Reflexology Therapy</a>
+        <a href="reflexology-vs-massage.html">Reflexology Therapy vs. Massage</a>
+        <a href="how-reflexology-therapy-works.html">How Reflexology Therapy Works</a>
         <a href="services.html">Services</a>
+        <a href="faq.html">New Clients &amp; FAQ</a>
         <a href="contact-us.html">Contact Us</a>
       </nav>
       <p>&copy; 2026 Ursu Holistic Wellness. All rights reserved.</p>

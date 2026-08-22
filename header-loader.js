@@ -26,23 +26,22 @@ function loadHeader() {
           </button>
           <div class="collapse navbar-collapse" id="primaryNavbar">
             <ul class="navbar-nav ms-auto align-items-lg-center">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                  <li><a class="dropdown-item" href="meet-lori.html">Meet Lori</a></li>
-                  <li><a class="dropdown-item" href="new-patient-experience.html">New Patient Experience</a></li>
-                  <li><a class="dropdown-item" href="faq.html">Frequently Asked Questions</a></li>
-                </ul>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="meet-lori.html">Meet Lori</a></li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="reflexologyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Reflexology Therapy</a>
                 <ul class="dropdown-menu" aria-labelledby="reflexologyDropdown">
-                  <li><a class="dropdown-item" href="reflexology-vs-massage.html">Reflexology Therapy vs Massage</a></li>
-                  <li><a class="dropdown-item" href="benefits-of-reflexology.html">Benefits of Reflexology</a></li>
+                  <li><a class="dropdown-item" href="benefits-of-reflexology.html">Benefits of Reflexology Therapy</a></li>
+                  <li><a class="dropdown-item" href="reflexology-vs-massage.html">Reflexology Therapy vs. Massage</a></li>
+                  <li><a class="dropdown-item" href="how-reflexology-therapy-works.html">How Reflexology Therapy Works</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="faq.html">New Clients &amp; FAQ</a></li>
               <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+              <li class="nav-item ms-lg-2">
+                <a class="btn-schedule" href="contact-us.html#locations" aria-label="Book Appointment">Book Appointment</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,6 +66,12 @@ function loadHeader() {
     document.querySelectorAll('#site-header .nav-link').forEach((link) => {
       link.addEventListener('click', () => {
         const mobileNav = document.getElementById('primaryNavbar');
+        const isDropdownToggle = link.classList.contains('dropdown-toggle');
+        const isHashOnlyLink = link.getAttribute('href') === '#';
+
+        // Keep the mobile menu open when opening a dropdown; close only for actual page links.
+        if (isDropdownToggle || isHashOnlyLink) return;
+
         if (mobileNav && mobileNav.classList.contains('show') && typeof bootstrap !== 'undefined') {
           const bsCollapse = new bootstrap.Collapse(mobileNav, { toggle: false });
           bsCollapse.hide();
