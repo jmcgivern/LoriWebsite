@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflexology vs Massage | Ursu Holistic Wellness</title>
+    <meta
+      name="description"
+      content="Understand the differences between reflexology and massage therapy, and discover which holistic treatment may be right for you."
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=03182026" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main id="main-content">
+      <section class="section hero minimal-hero" tabindex="-1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="hero-content fade-in">
+                <h1>Reflexology Therapy<br><span class="vs">vs Massage</span></h1>
+                <p>Discover the key differences between reflexology and massage therapy, and how they can both support your wellness journey.</p>
+                <button type="button" class="btn-schedule" onclick="openJaneApp()" aria-label="Book Reflexology Session">Book Your Session</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="container">
+          <h2 class="section-title fade-in">Key Differences</h2>
+          
+          <div class="row g-4 mt-4">
+            <div class="col-lg-6 fade-in">
+              <div class="info-card">
+                <h3>Reflexology Therapy</h3>
+                <ul class="feature-list">
+                  <li><strong>Focus:</strong> Reflex zones on feet, hands, and face</li>
+                  <li><strong>Pressure:</strong> Targeted, specific pressure point work</li>
+                  <li><strong>Movement:</strong> Localized stimulation of reflex areas</li>
+                  <li><strong>Purpose:</strong> Support overall body systems and natural healing</li>
+                  <li><strong>Session Focus:</strong> Whole-body wellness through targeted zones</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6 fade-in">
+              <div class="info-card">
+                <h3>Massage Therapy</h3>
+                <ul class="feature-list">
+                  <li><strong>Focus:</strong> Muscles and soft tissues throughout the body</li>
+                  <li><strong>Pressure:</strong> Variable pressure, kneading, and stretching</li>
+                  <li><strong>Movement:</strong> Broad strokes and muscle manipulation</li>
+                  <li><strong>Purpose:</strong> Release muscle tension and improve circulation</li>
+                  <li><strong>Session Focus:</strong> Localized muscle relief and relaxation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-5">
+            <div class="col-lg-8 mx-auto fade-in">
+              <div class="info-card">
+                <h3>Which Is Right for You?</h3>
+                <p><strong>Choose Reflexology Therapy if you:</strong></p>
+                <ul class="feature-list">
+                  <li>Want to support overall wellness and natural balance</li>
+                  <li>Prefer targeted pressure point work</li>
+                  <li>Are looking for stress relief and nervous system support</li>
+                </ul>
+
+                <p class="mt-4"><strong>Choose Massage if you:</strong></p>
+                <ul class="feature-list">
+                  <li>Have specific muscle tension or sports injuries</li>
+                  <li>Prefer hands-on manipulation of larger muscle groups</li>
+                  <li>Want localized pain relief and muscle recovery</li>
+                  <li>Enjoy deeper, broader tissue work</li>
+                </ul>
+
+                <p class="mt-4"><em>Many clients benefit from both therapies! Reflexology Therapyand massage complement each other beautifully in a comprehensive wellness routine.</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div id="site-footer"></div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openJaneApp() {
+  // Gracefully redirects to the central booking and locations page
+  window.location.href = "contact-us.html#locations";
+}
+
+      function openMaps() {
+        const street = '3335 Dougall Ave';
+        const city = 'Windsor';
+        const region = 'ON';
+        const postal = 'N9E 1S8';
+        const dest = encodeURIComponent(`${street}, ${city}, ${region} ${postal}`);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        let url = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+          url = `https://maps.apple.com/?daddr=${dest}`;
+        }
+        window.open(url, '_blank');
+      }
+
+      function openGoogleReview() {
+        window.open('https://www.google.com/maps/place/Ursu+Holistic+Wellness', '_blank');
+      }
+
+
+      window.addEventListener('load', function () {
+        document.querySelectorAll('.fade-in').forEach((el) => {
+          el.classList.add('visible');
+        });
+      });
+    </script>
+    <script src="header-loader.js"></script>
+    <script src="footer-loader.js"></script>
+  </body>
+</html>
