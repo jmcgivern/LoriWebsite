@@ -37,7 +37,7 @@ function loadHeader() {
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="faq.html">New Clients &amp; FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="new-clients-and-faq.html">New Clients &amp; FAQ</a></li>
               <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
               <li class="nav-item ms-lg-2">
                 <a class="btn-schedule" href="contact-us.html#locations" aria-label="Book Appointment">Book Appointment</a>
